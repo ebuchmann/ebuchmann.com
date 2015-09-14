@@ -8,19 +8,18 @@ url: "http://ebuchmann.com" # the base hostname & protocol for your site
 # Build settings
 
 sass:
-  style: compressed
+ style: compressed
 
 exclude:
-  - _psd
-#  - images
-  - node_modules
-  - _js
-  - package.json
-  - gruntfile.js
+ - _psd
+ - node_modules
+ - _js
+ - package.json
+ - gruntfile.js
 
 defaults:
-  -
-    scope:
-      type: 'posts'
-    values:
-      permalink: /:categories/:title
+ -
+  scope:
+   type: 'posts'
+  values:
+   permalink: /:categories/:title
