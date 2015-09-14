@@ -94,13 +94,19 @@ $media: (
 }
 
 /*
-  - Make the media query an object / array
-  - Change media-query to just media, or something shorter
-  - Possibly loop thru the array to make media quries (@include media-xs)
+  - Change media-query to just media, or something shorter : @include media-sm
   - Look into making extra media queries that only include the specific size
   - Separate variables to their own file
   - Separate media includes to their own file
-  - Change _base to bootstrap 4's _normalize
+  - Change _base to bootstrap 4's _normalize or combine them into something
+  - Add page descriptions
+  - Add ebuchmann.com to page titles
+  - Make a working sitemap.xml
+  - Update site with google webmaster
+  - Update site with bing webmaster
+  - Add other series
+  - Update navigation to reflect multiple series
+  - Update mobile navigation to reflect multiple series
 */
 
 #media-helper {
