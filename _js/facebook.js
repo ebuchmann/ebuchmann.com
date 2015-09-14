@@ -12,7 +12,7 @@
 */
 
 (function() {
-  var appId = '1464356960535642';  // test api, localhost:4000
+  var appId = '1476188969352441';  // ebuchmann - jekyll
   var language = 'en_US';
   var className = 'fb-share';
 
