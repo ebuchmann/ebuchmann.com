@@ -17,9 +17,10 @@ exclude:
  - package.json
  - gruntfile.js
 
-defaults:
- -
-  scope:
-   type: 'posts'
-  values:
-   permalink: /:categories/:title
+#defaults:
+# -
+#  scope:
+#   type: 'posts'
+#  values:
+#   permalink: /:categories/:title
+permalink: :categories/:title/
