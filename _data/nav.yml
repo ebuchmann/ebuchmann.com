@@ -1,0 +1,12 @@
+- title: Home
+  url: /
+  slug: index.html
+
+- title: Paintings
+  url: /series/fruit-and-such/
+  slug: series
+  slug2: paintings
+
+- title: Contact
+  url: /contact/
+  slug: contact

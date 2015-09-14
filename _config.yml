@@ -1,0 +1,26 @@
+# Site settings
+title: ebuchmann
+email: me@ebuchmann.com
+description: I paint simply for the sake of painting while capturing a moment full of color and expression.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://ebuchmann.com" # the base hostname & protocol for your site
+
+# Build settings
+
+sass:
+  style: compressed
+
+exclude:
+  - _psd
+#  - images
+  - node_modules
+  - _js
+  - package.json
+  - gruntfile.js
+
+defaults:
+  -
+    scope:
+      type: 'posts'
+    values:
+      permalink: /:categories/:title

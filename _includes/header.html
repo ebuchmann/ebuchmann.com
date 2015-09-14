@@ -1,0 +1,17 @@
+<header class="site-header">
+
+  <div class="container site-flex">
+
+    <a class="site-title" href="{{ site.baseurl }}/"><span class="site-hide">The paintings of</span> {{ site.title }}</a>
+
+    <nav class="site-nav">
+
+        {% for nav in site.data.nav %}
+          <a class="site-link{% if page.url contains nav.slug or page.url contains nav.slug2 %} current{% endif %}" href="{{ nav.url }}">{{ nav.title }}</a>
+        {% endfor %}
+
+    </nav>
+
+  </div>
+
+</header>

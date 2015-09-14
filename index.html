@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero_right">
+      <h1 class="hero_title">Eric Buchmann</h1>
+      <h2 class="hero_sub">Impressionist Oil Painter</h2>
+      <p class="hero_text">“Paint for fucking paint” as an old professor told me. To this date the statement still holds true in my work. I paint simply for the sake of painting while capturing a moment full of color and expression. In the end I strive to achieve my goal that <i>every inch of the painting needs to be interesting.</i></p>
+      <a class="hero_button" href="/">View my art</a>
+    </div>
+  </div>
+</section>
+
+<section class="recent">
+  <div class="container">
+    <h3 class="recent_artwork">Recent Artwork</h3>
+
+    <h4 class="recent_more"><a href="/series/fruit-and-such/">View More Art</a></h4>
+
+    <ul class="recent_items recent_items-home">
+      {%for post in site.posts limit:4 %}
+        {% include painting.html %}
+      {% endfor %}
+    </ul>
+
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <h3 class="about_title">About Me</h3>
+    <p class="about_text">As a painter I started working on artwork around 2003 when I enrolled in a painting course. As time went by I grew more interested in painting, and more specifically oil painting. I find the thickness of the paint to be a very important part of the overall painting and enjoy using a variety of bright colors. You can always <a href="/contact/">contact me</a> if you want to say something.</p>
+  </div>
+</section>

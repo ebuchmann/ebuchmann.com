@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="post">
+
+  <div class="container">
+
+    <header class="series">
+      <h1 class="series_title">{{ page.title }}</h1>
+      <h2 class="series_timeframe">{{ page.timeframe }}</h2>
+      {{ content }}
+    </header>
+
+    <ul class="recent_items">
+      {%for post in site.posts %}
+        {% include painting.html %}
+      {% endfor %}
+    </ul>
+
+  </div>
+
+</div>
