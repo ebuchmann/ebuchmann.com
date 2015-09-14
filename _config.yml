@@ -22,4 +22,4 @@ defaults:
   scope:
    type: 'posts'
   values:
-   permalink: :categories/:title/
+   permalink: /:categories/:title.html
