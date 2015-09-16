@@ -776,8 +776,6 @@ ga('send', 'pageview');
     var original = originals[i];
 
     original.onclick = function(e) {
-      e.preventDefault();
-
       var title = this.getAttribute('title');
 
       ga('send', 'event', 'original', 'click', title)
@@ -789,8 +787,6 @@ ga('send', 'pageview');
     var print = prints[i];
 
     print.onclick = function(e) {
-      e.preventDefault();
-
       var title = this.getAttribute('title');
 
       ga('send', 'event', 'print', 'click', title)
