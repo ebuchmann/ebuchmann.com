@@ -33,13 +33,13 @@ permalink: /:categories/:title
         {% if page.sold == "yes" %}
           <span class="original_sold">- sold -</span>
         {% else %}
-          <a class="original_button original_button-available" href="{{ page.original }}" target="_blank">Only 1 available - Buy the original for ${{ page.price }}</a>
+          <a class="original_button original_button-available ga-original" title="{{ page.title }}" href="{{ page.original }}" target="_blank">Only 1 available - Buy the original for ${{ page.price }}</a>
         {% endif %}
 
       </div>
 
       {% if page.print %}
-        <p class="post-prints"><a href="{{ page.print }}" target="_blank">Prints of this artwork are available on Etsy.</a></p>
+        <p class="post-prints"><a class="ga-print" title="{{ page.title }}" href="{{ page.print }}" target="_blank">Prints of this artwork are available on Etsy.</a></p>
       {% endif %}
 
       <h4>Share this</h4>
