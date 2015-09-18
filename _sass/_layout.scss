@@ -2,15 +2,15 @@
 
 .container {
   padding: 0 15px;
-  @include container($sm);
-  @include media-query($md) {
-    @include container($md);
+  @include container(map-get($breakpoints, sm));
+  @include breakpoint(md) {
+    @include container(map-get($breakpoints, md));
   }
-  @include media-query($lg) {
-    @include container($lg);
+  @include breakpoint(lg) {
+    @include container(map-get($breakpoints, lg));
   }
-  @include media-query($xl) {
-    @include container($xl);
+  @include breakpoint(xl) {
+    @include container(map-get($breakpoints, xl));
   }
 }
 
@@ -30,96 +30,6 @@ body {
   flex: 1;
 }
 
-/*  HEADER */
-.site-header {
-  background-color: #e4e4e4;
-  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.15);
-  position: relative;
-  margin-bottom: $content-margin;
-}
-
-.site-title {
-  font-size: 1.3em;
-  color: $black;
-  text-align: center;
-  display: block;
-
-  @include media-query($sm) {
-    text-align: left;
-    display: inline;
-  }
-
-  &:hover {
-    text-decoration: none;
-  }
-  &:visited {
-    color: $black;
-  }
-}
-
-.site-hide {
-  display: none;
-
-  @include media-query($md) {
-    display: inline;
-  }
-}
-
-.site-flex {
-  @include media-query($sm) {
-    display: flex;
-    align-items: center;
-  }
-}
-
-@include media-xs-only {
-  .site-nav {
-    text-align: center;
-    padding-top: 10px;
-    margin-top: 10px;
-    border-top: 1px solid $grey;
-
-    .site-link {
-      padding: 4px 8px;
-    }
-
-    .current {
-      border-bottom: 1px solid $dark-red;
-    }
-  }
-}
-
-@include media-query($sm) {
-  .site-nav {
-    margin-left: auto;
-    $nav-padding: 25px;
-
-    .site-link {
-      padding: $nav-padding 17px;
-      display: inline-block;
-      border-left: 1px solid #bbb;
-      float: left;
-      text-transform: uppercase;
-      font-size: .9em;
-      color: $black;
-
-      &:last-child {
-        border-right: 1px solid #bbb;
-      }
-
-      &:hover {
-        background-color: #dedede;
-      }
-    }
-
-    .current {
-      background-color: #dedede;
-      border-bottom: 3px solid $dark-red;
-      padding-bottom: $nav-padding - 3px;
-    }
-  }
-}
-
 /* FOOTER */
 .footer {
   background-color: #282828;
@@ -132,7 +42,7 @@ body {
     font-size: .85em;
     margin: 0;
 
-    @include media-xs-only {
+    @include breakpoint-xs-only {
       display: block;
       text-align: center;
     }
@@ -142,7 +52,7 @@ body {
     text-align: center;
     margin-top: 15px;
 
-    @include media-query($sm) {
+    @include breakpoint(sm) {
       float: right;
       margin-top: 0;
       margin-left: 15px;
@@ -156,7 +66,7 @@ body {
     margin: 0 8px;
 
     &:last-child {
-      @include media-query($sm) {
+      @include breakpoint(sm) {
         margin-right: 0;
       }
     }
@@ -188,7 +98,7 @@ body {
   background-image: url('/images/hero-sm.jpg');
   background-repeat: repeat;
 
-  @include media-query($md) {
+  @include breakpoint(md) {
     background-image: url('/images/hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -196,10 +106,10 @@ body {
   }
 
   &_right {
-    @include media-query($md) {
+    @include breakpoint(md) {
       @include span(7 of 12 last);
     }
-    @include media-query($lg) {
+    @include breakpoint(lg) {
       @include span(6 of 12 last);
     }
 
@@ -248,13 +158,13 @@ body {
     font-size: 1.8em;
     margin-bottom: gutter();
 
-    @include media-query($sm) {
+    @include breakpoint(sm) {
       @include span(6 of 12);
     }
-    @include media-query($md) {
+    @include breakpoint(md) {
       @include span(8 of 12);
     }
-    @include media-query($lg) {
+    @include breakpoint(lg) {
       @include span(9 of 12);
     }
 
@@ -267,19 +177,19 @@ body {
     line-height: 60px;
     font-size: 1.2em;
 
-    @include media-xs-only {
+    @include breakpoint-xs-only {
       &::after {
         display: none;
       }
     }
-    @include media-query($sm) {
+    @include breakpoint(sm) {
       text-align: right;
       @include span(6 of 12 last);
     }
-    @include media-query($md) {
+    @include breakpoint(md) {
       @include span(4 of 12 last);
     }
-    @include media-query($lg) {
+    @include breakpoint(lg) {
       @include span(3 of 12 last);
     }
 
@@ -299,28 +209,23 @@ body {
     &-home {
       margin-bottom: - $content-margin / 4;
 
-      @include media-md-only() {
+      @include breakpoint-md-only() {
         .recent_item:nth-child(4) {
           display: none;
         }
-      }/*
-      @include media-query($lg) {
-        .recent_item:nth-child(4) {
-          display: inherit;
-        }
-      }*/
+      }
     }
   }
 
   &_item {
     margin-bottom: gutter();
-    @include media-query($sm) {
+    @include breakpoint(sm) {
       @include gallery(6 of 12);
     }
-    @include media-query($md) {
+    @include breakpoint(md) {
       @include gallery(4 of 12);
     }
-    @include media-query($lg) {
+    @include breakpoint(lg) {
       @include gallery(3 of 12);
     }
 
@@ -401,13 +306,13 @@ body {
 /* PAINTING */
 
 .painting-left {
-  @include media-query($md) {
+  @include breakpoint(md) {
     @include span(7 of 12);
   }
 }
 
 .painting-right {
-  @include media-query($md) {
+  @include breakpoint(md) {
     @include span(5 of 12 last);
   }
 }
@@ -419,13 +324,13 @@ body {
     margin-bottom: gutter();
     line-height: 60px;
 
-    @include media-query($sm) {
+    @include breakpoint(sm) {
       @include span(6 of 12);
     }
-    @include media-query($md) {
+    @include breakpoint(md) {
       @include span(8 of 12);
     }
-    @include media-query($lg) {
+    @include breakpoint(lg) {
       @include span(9 of 12);
     }
 
@@ -439,19 +344,19 @@ body {
     line-height: 60px;
     font-size: 1.4em;
 
-    @include media-xs-only {
+    @include breakpoint-xs-only {
       &::after {
         display: none;
       }
     }
-    @include media-query($sm) {
+    @include breakpoint(sm) {
       text-align: right;
       @include span(6 of 12 last);
     }
-    @include media-query($md) {
+    @include breakpoint(md) {
       @include span(4 of 12 last);
     }
-    @include media-query($lg) {
+    @include breakpoint(lg) {
       @include span(3 of 12 last);
     }
 
@@ -489,10 +394,10 @@ body {
     line-height: 1.5;
     float: left;
 
-    @include media-xs-only {
+    @include breakpoint-xs-only {
       float: none;
     }
-    @include media-md-only {
+    @include breakpoint-md-only {
       float: none;
     }
   }
@@ -502,10 +407,10 @@ body {
     font-size: .85em;
     float:right;
 
-    @include media-xs-only {
+    @include breakpoint-xs-only {
       float: none;
     }
-    @include media-md-only {
+    @include breakpoint-md-only {
       float: none;
     }
   }
@@ -631,12 +536,12 @@ body {
     }
   }
   &_left {
-    @include media-query($md) {
+    @include breakpoint(md) {
       @include span(6 of 12);
     }
   }
   &_right {
-    @include media-query($md) {
+    @include breakpoint(md) {
       @include span(6 of 12 last);
     }
   }

@@ -1,3 +1,13 @@
+#  - Look into making extra media queries that only include the specific size
+#  - Separate variables to their own file
+#  - Separate media includes to their own file
+#  - Change _base to bootstrap 4's _normalize or combine them into something (or their reboot css when it's done)
+#  - Add series description (meta and body copy)
+#  - Add other series
+#  -- Update navigation to reflect multiple series
+#  -- Update mobile navigation to reflect multiple series
+#  - Setup a thank you page, or ajax submit, for the contact form
+
 # Site settings
 title: ebuchmann | oil painter
 email: me@ebuchmann.com

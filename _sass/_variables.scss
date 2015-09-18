@@ -1,3 +1,13 @@
+// colors
+$black:            #121212;
+$dark-grey:        #424242;
+$grey:             #aaaaaa;
+$light-grey:       #eeeeee;
+$dark-red:         #92250d;
+$light-red:        #d9534f;
+$red:              #c9302c;
+$white:            #ffffff;
+
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
@@ -22,15 +32,6 @@ $font-size-h4:               1.5rem !default;
 $font-size-h5:               1.25rem !default;
 $font-size-h6:               1rem !default;
 
-$display1-size:               3.5rem !default;
-$display2-size:               4.5rem !default;
-$display3-size:               5.5rem !default;
-$display4-size:               6rem !default;
-
-$display1-weight:             300 !default;
-$display2-weight:             300 !default;
-$display3-weight:             300 !default;
-$display4-weight:             300 !default;
 
 $line-height:                1.5 !default;
 
@@ -53,3 +54,32 @@ $blockquote-border-color:     $grey !default;
 
 $hr-border-color:             rgba(0,0,0,.1) !default;
 $hr-border-width:             .0625rem;
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$border-radius: 5px;
+$content-margin: 60px;
+
+// media sizes
+
+$breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);

@@ -1,85 +1,9 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
+sitemap:
+  exclude: 'yes'
 ---
 @charset "utf-8";
-
-
-
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-$border-radius: 5px;
-$content-margin: 60px;
-
-// colors
-$black:            #121212;
-$dark-grey:        #424242;
-$grey:             #aaaaaa;
-$light-grey:       #eeeeee;
-$dark-red:         #92250d;
-$light-red:        #d9534f;
-$red:              #c9302c;
-$white:            #ffffff;
-
-// media sizes
-
-$xs: 0; // Extra small screen / phone
-$sm: 480px; // Small screen / phone - 34rem
-$md: 720px; // Medium screen / tablet - 45rem
-$lg: 960px; // Large screen / desktop - 60rem
-$xl: 1200px; // Extra large screen / wide desktop - 75rem
-
-$media: (
-  xs: 0,
-  sm: 34em,
-  md: 48em,
-  lg: 62em,
-  xl: 75em
-);
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-  @media screen and (min-width: $device) {
-    @content;
-  }
-}
-
-@mixin media-xs-only() {
-  @media screen and (max-width: $sm - 1) {
-    @content;
-  }
-}
-
-@mixin media-md-only() {
-  @media screen and (min-width: $md + 1) and (max-width: $lg - 1) {
-    @content;
-  }
-}
 
 %bordered {
   content: '';
@@ -93,59 +17,6 @@ $media: (
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25);
 }
 
-/*
-  - Change media-query to just media, or something shorter : @include media-sm
-  - Look into making extra media queries that only include the specific size
-  - Separate variables to their own file
-  - Separate media includes to their own file
-  - Change _base to bootstrap 4's _normalize or combine them into something
-  - Add page descriptions
-  - Add ebuchmann.com to page titles
-  - Make a working sitemap.xml
-  - Update site with google webmaster
-  - Update site with bing webmaster
-  - Add other series
-  - Update navigation to reflect multiple series
-  - Update mobile navigation to reflect multiple series
-*/
-
-#media-helper {
-  .xs, .sm, .md, .lg, .xl {
-    display: none;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    background-color: #fff;
-    position: fixed;
-  }
-  @include media-query($xs) {
-    .xs {
-      display: block;
-    }
-  }
-  @include media-query($sm) {
-    .sm {
-      display: block;
-    }
-  }
-  @include media-query($md) {
-    .md {
-      display: block;
-    }
-  }
-  @include media-query($lg) {
-    .lg {
-      display: block;
-    }
-  }
-  @include media-query($xl) {
-    .xl {
-      display: block;
-
-    }
-  }
-}
-
 // Susy Layouts
 
 $wide: 12 2/3 fluid float outside;
@@ -154,10 +25,13 @@ $shift: 2 0 fluid float outside;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-  "susy",
   'variables',
+  "vendor/susy",
   "normalize",
+  'roboto',
+  'breakpoint',
   'type',
   'base',
-  "layout"
+  'header',
+  'layout'
 ;
