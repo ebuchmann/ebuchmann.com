@@ -7,28 +7,18 @@ ga('create', 'UA-40066370-7', 'auto');
 ga('send', 'pageview');
 
 (function() {
-  var originals = document.getElementsByClassName('ga-original');
-  var prints = document.getElementsByClassName('ga-print');
+  var links = document.getElementsByClassName('ga-link');
 
-  // track clicks to original paintings on Etsy
-  for( var i = 0; i < originals.length; i++ ) {
-    var original = originals[i];
+  // track clicks to originals and prints on Etsy
+  for( var i = 0; i < links.length; i++ ) {
+    var link = links[i];
 
-    original.onclick = function(e) {
+    link.onclick = function(e) {
       var title = this.getAttribute('title');
+      var category = this.getAttribute('data-category');
 
-      ga('send', 'event', 'original', 'click', title)
+      ga('send', 'event', category, 'click', title)
     };
   };
 
-  // track clicks to prints on Etsy
-  for( var i = 0; i < prints.length; i++ ) {
-    var print = prints[i];
-
-    print.onclick = function(e) {
-      var title = this.getAttribute('title');
-
-      ga('send', 'event', 'print', 'click', title)
-    };
-  };
 })();

@@ -1,12 +1,13 @@
-#  - Look into making extra media queries that only include the specific size
 #  - Separate variables to their own file
-#  - Separate media includes to their own file
 #  - Change _base to bootstrap 4's _normalize or combine them into something (or their reboot css when it's done)
 #  - Add series description (meta and body copy)
 #  - Add other series
 #  -- Update navigation to reflect multiple series
 #  -- Update mobile navigation to reflect multiple series
 #  - Setup a thank you page, or ajax submit, for the contact form
+#  - Refactor CSS and separate sections into their own file (header, footer, gallery list, hero, painting page)
+#  - Remove Jekyll's auto compilation of Sass and implement my own compilation / minification of Sass
+#  - See how adding render blocking CSS for the header / hero works with page speed
 
 # Site settings
 title: ebuchmann | oil painter
