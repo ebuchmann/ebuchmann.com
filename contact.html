@@ -6,34 +6,33 @@ permalink: /contact/
 
 <div class="container">
 
-  <h1 class="contact_title">Contact Me</h1>
+    <h1 class="contact_title">Contact Me</h1>
 
-  <div class="contact_left">
+    <div class="contact_left">
+        <p>I’m a painter currently living in Portland, Oregon. Between web development and painting I spend a good deal of my time working on creative things. My current motivation is to continue working with my <a href="/series/fruit-and-such">fruit series</a> of paintings while trying to improve my style and expression with each new piece.</p>
+        <p>If you’re interested in some art or just want to send me a message use the contact form. Some of my <a href="/series/fruit-and-such">recent artwork</a> is available for sale on <a href="https://www.etsy.com/shop/ebuchmann" target="_blank">Etsy</a> and I’m also available for <a href="https://www.etsy.com/listing/245510047/custom-oil-painting-one-of-a-kind-fruit" target="_blank">custom paintings</a>.</p>
+    </div>
 
-    <p>I’m a painter currently living in Portland, Oregon. Between web development and painting I spend a good deal of my time working on creative things. My current motivation is to continue working with my <a href="/series/fruit-and-such">fruit series</a> of paintings while trying to improve my style and expression with each new piece.</p>
-    <p>If you’re interested in some art or just want to send me a message use the contact form. Some of my <a href="/series/fruit-and-such">recent artwork</a> is available for sale on <a href="https://www.etsy.com/shop/ebuchmann" target="_blank">Etsy</a> and I’m also available for <a href="https://www.etsy.com/listing/245510047/custom-oil-painting-one-of-a-kind-fruit" target="_blank">custom paintings</a>.</p>
-  </div>
+    <div class="contact_right">
 
-  <div class="contact_right">
+        <form class="contactme" action="//formspree.io/{{ site.email }}" method="POST">
+            <input type="text" name="_gotcha" style="display:none" />
 
-    <form class="contactme" action="//formspree.io/{{ site.email }}" method="POST">
+            <label class="contactme_label" for="name">Your Name</label>
+            <input class="contactme_text" type="text" name="name" required />
 
-      <label class="contactme_label" for="name">Your Name</label>
-      <input class="contactme_text" type="text" name="name" required />
+            <label class="contactme_label" for="_replyto">Your Email</label>
+            <input class="contactme_text" type="email" name="_replyto" required />
 
-      <label class="contactme_label" for="_replyto">Your Email</label>
-      <input class="contactme_text" type="email" name="_replyto" required />
+            <label class="contactme_label" for="message">Your Message</label>
+            <textarea class="contactme_textarea" name="message" required></textarea>
 
-      <label class="contactme_label" for="message">Your Message</label>
-      <textarea class="contactme_textarea" name="message" required></textarea>
+            <input type="hidden" name="_subject" value="Contact form: ebuchmann.com" />
+            <input type="hidden" name="_next" value="//ebuchmann.com/thanks.html" />
+            <input class="contactme_submit" type="submit" value="Send">
 
-      <input type="hidden" name="_subject" value="Contact form: ebuchmann.com" />
-      <input type="hidden" name="_next" value="//ebuchmann.com/thanks.html" />
-      <input type="text" name="_gotcha" style="display:none" />
-      <input class="contactme_submit" type="submit" value="Send">
+        </form>
 
-    </form>
-
-  </div>
+    </div>
 
 </div>
